@@ -7,3 +7,6 @@ edition = "2021"
 name = "messaging"
 test = false
 bench = false
+
+[dependencies]
+serialport = "4.4.0"
