@@ -66,6 +66,16 @@ fn main() {
         }
     });
 
+    println!("|==============================================|");
+    println!("| NEW LIFE CHINESE LUTHERAN CHURCH CHAT SERVER |");
+    println!("|==============================================|");
+    println!("|                                              |");
+    println!("| Rules:                                       |");
+    println!("| - Connect using your micro:bit               |");
+    println!("| - Have fun!                                  |");
+    println!("|==============================================|");
+    println!();
+
     for msg in rx {
         println!("{}: {}", msg.author, msg.message);
     }
