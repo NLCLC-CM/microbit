@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <script src="https://unpkg.com/htmx.org@2.0.0" integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <section id="messages" hx-get="/messages" hx-trigger="load, every 1s">
+      No messages sent
+    </section>
+
+    <form hx-post="/message" hx-on--after-request="this.reset()">
+      <input type="text" name="author" placeholder="Author" />
+      <input type="text" name="message" placeholder="Type your message here!" />
+      <input type="submit" />
+    </form>
+  </main>
+</body>
+</html>
